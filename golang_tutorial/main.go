@@ -1,8 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"golang_tutorial/subjects"
 )
+
+type employee struct {
+	salary  int
+	country string
+}
 
 func main()  {
 	// Part 1
@@ -22,5 +28,14 @@ func main()  {
 	subjects.PrintSwitchStatement("no")
 
 	// Part 5
-	subjects.PrintArrays("yes")
+	subjects.PrintArrays("no")
+	subjects.PrintSlices("no")
+	subjects.PrintVariadicFunctions("no")
+	subjects.PrintMap("yes")
+
+	emp1 := employee{
+		salary:  12000,
+		country: "USA",
+	}
+	fmt.Println(emp1)
 }
