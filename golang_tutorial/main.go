@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"golang_tutorial/subjects"
 )
 
@@ -31,11 +30,12 @@ func main()  {
 	subjects.PrintArrays("no")
 	subjects.PrintSlices("no")
 	subjects.PrintVariadicFunctions("no")
-	subjects.PrintMap("yes")
 
-	emp1 := employee{
-		salary:  12000,
-		country: "USA",
-	}
-	fmt.Println(emp1)
+	//Part 6
+	subjects.PrintMap("no")
+	subjects.PrintStrings("no")
+
+	//Part 7
+	subjects.PrintPointers("no")
+	subjects.PrintStructs("yes")
 }
