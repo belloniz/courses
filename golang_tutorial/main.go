@@ -37,5 +37,6 @@ func main()  {
 
 	//Part 7
 	subjects.PrintPointers("no")
-	subjects.PrintStructs("yes")
+	subjects.PrintStructs("no")
+	subjects.PrintMethods("yes")
 }
