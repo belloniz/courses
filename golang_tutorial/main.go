@@ -38,5 +38,11 @@ func main()  {
 	//Part 7
 	subjects.PrintPointers("no")
 	subjects.PrintStructs("no")
-	subjects.PrintMethods("yes")
+	subjects.PrintMethods("no")
+
+	//Part 8
+	subjects.PrintInterfacesPt1("no")
+	subjects.PrintInterfacesPt2("no")
+
+	// Part 9g
 }

@@ -36,6 +36,8 @@ type person struct {
 	address
 }
 
+type myInt int
+
 func (e Employee)  displaySalary(){
 	fmt.Printf("Salary of %s id %s%d", e.name, e.currency, e.salary)
 }
@@ -70,6 +72,18 @@ func area(r Rectangle)  {
 
 func (r Rectangle) area()  {
 	fmt.Printf("Area method result: %d\n", (r.length * r.width))
+}
+
+func perimeter(r *Rectangle)  {
+	fmt.Println("perimeter function output:", 2*(r.length+r.width))
+}
+
+func (r *Rectangle) perimeter()  {
+	fmt.Println("perimeter function output:", 2*(r.length+r.width))
+}
+
+func (a myInt) add(b myInt) myInt {
+	return a + b
 }
 
 func PrintMethods(print string)  {
@@ -137,6 +151,25 @@ func PrintMethods(print string)  {
 		*/
 		//area(p)
 		p2.area()
+		fmt.Println()
+
+		fmt.Println("Pointer receivers in methods vs Pointer arguments in functions")
+		r3 := Rectangle{10,5}
+		p3 := r3
+		p3.perimeter()
+		/*
+		   cannot use r (type rectangle) as type *rectangle in argument to perimeter
+		*/
+		//perimeter(r)
+		r3.perimeter()
+		fmt.Println()
+
+		fmt.Println("Methods with non-struct receivers")
+		num1 := myInt(5)
+		num2 := myInt(10)
+
+		sum := num1.add(num2)
+		fmt.Println("Sum is", sum)
 	} else {
 		// Do nothing
 	}
