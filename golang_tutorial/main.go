@@ -44,5 +44,9 @@ func main()  {
 	subjects.PrintInterfacesPt1("no")
 	subjects.PrintInterfacesPt2("no")
 
-	// Part 9g
+	// Part 9
+	subjects.PrintGoRoutines("no")
+	subjects.PrintChannels("no")
+	subjects.PrintBufferedChannelsAndWorkerPools("no")
+	subjects.PrintBufferedChannelsAndWorkerPoolspt2("no")
 }
