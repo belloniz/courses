@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func iMap(s []int, f func(int) int) []int {
 	var r []int
@@ -13,5 +11,9 @@ func iMap(s []int, f func(int) int) []int {
 }
 
 func main()  {
-
+	a := []int{5, 6, 7, 8, 9}
+	r := iMap(a, func(n int) int{
+		return n*5
+	})
+	fmt.Println(r)
 }
